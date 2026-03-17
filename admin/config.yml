@@ -1,0 +1,21 @@
+backend:
+  name: github
+  repo: GZidane301/inter-leges
+  branch: main
+
+media_folder: "imagens"
+
+collections:
+  - name: "artigos"
+    label: "Artigos"
+    folder: "_artigos"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Titulo", name: "titulo", widget: "string" }
+      - { label: "Resumo", name: "resumo", widget: "text" }
+      - { label: "Categoria", name: "categoria", widget: "select", options: ["Teoria do Direito", "Filosofia", "Hermeneutica", "Direitos Fundamentais"] }
+      - { label: "Data", name: "data", widget: "date", format: "DD MMM. YYYY" }
+      - { label: "Tempo de leitura", name: "tempo", widget: "string" }
+      - { label: "Destaque", name: "destaque", widget: "boolean", default: false }
+      - { label: "Conteudo", name: "body", widget: "markdown" }
